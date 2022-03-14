@@ -7,31 +7,26 @@ const http = require("http");
 
 /**
  *
- * Einen Server mit commonjs erstellen
+ * Einen Server erstellen
  *
  */
-const server = http.createServer(function (req, res) {
+const server = http.createServer((req, res) => {
   // response header
   res.writeHead(200, {
-    "Content-Type": "text/plain",
+    "Content-Type": "text/html",
   });
   // response
-  res.write(`commonjs`);
+  res.write(`hello world ${req.method} ${req.url}`);
 
   // response beenden (sonst endlos)
   res.end();
 });
 
-// Server starten und Callback
-server.listen(`3000`, function () {
-  console.log(`commonjs`);
-});
-
 /**
  *
- * Einen Server mit ECMA-Script erstellen
+ * Server starten und Callback
  *
  */
-
-// const server = http.createServer((req, res) => {
-// server.listen(`3000`, () => {
+server.listen(`3000`, () => {
+  console.log(`hello world`);
+});

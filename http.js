@@ -7,7 +7,7 @@ const http = require("http");
 
 /**
  *
- * Einen Server erstellen
+ * Server erstellen
  *
  */
 const server = http.createServer((req, res) => {

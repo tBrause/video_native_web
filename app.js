@@ -6,15 +6,29 @@
 // API Modul
 const http = require("http");
 
+// Externes Modul
+const express = require("express");
+
 // Eigenes Modul
-const handle = require("./server/handle");
+//const handle = require("./server/handle");
+
+/**
+ *
+ * APP mit Express
+ *
+ */
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send(`Hello world`);
+});
 
 /**
  *
  * Server erstellen
  *
  */
-const server = http.createServer(handle);
+const server = http.createServer(app);
 
 /**
  *

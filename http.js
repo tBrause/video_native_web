@@ -13,7 +13,7 @@ const http = require("http");
 const server = http.createServer((req, res) => {
   // response header
   res.writeHead(200, {
-    "Content-Type": "text/html",
+    "Content-Type": "text/html; charset=utf-8",
   });
   // response
   res.write(`hello world ${req.method} ${req.url}`);

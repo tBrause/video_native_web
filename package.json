@@ -1,10 +1,9 @@
 {
   "name": "video_native_web",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Video Turtorial",
   "main": "app.js",
   "author": "Torsten Brause",
   "license": "ISC",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
